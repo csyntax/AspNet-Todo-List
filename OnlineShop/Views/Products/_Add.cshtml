@@ -1,0 +1,8 @@
+﻿@model OnlineShop.ViewModels.Products.ProductViewModel
+
+@using (Html.BeginForm("Add", "Products", FormMethod.Post))
+{
+    @Html.EditorFor(m => m.Name)
+    @Html.EditorFor(m => m.Description)
+    <button type="submit" class="btn btn-default">Add</button>
+}

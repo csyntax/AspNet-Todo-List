@@ -1,0 +1,11 @@
+﻿@using OnlineShop.ViewModels.Products
+@model IEnumerable<OnlineShop.ViewModels.Products.ProductViewModel>
+
+@foreach (var item in Model)
+{
+    <div>
+        @item.Name
+    </div>
+}
+<hr />
+@Html.Partial("_Add", new ProductViewModel())
