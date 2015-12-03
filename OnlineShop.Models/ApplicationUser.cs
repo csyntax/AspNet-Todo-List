@@ -11,7 +11,7 @@ namespace OnlineShop.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        public ICollection<Product> products { get; set; }
+        //private ICollection<Product> products { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
@@ -21,9 +21,9 @@ namespace OnlineShop.Models
             return userIdentity;
         }
 
-        public ApplicationUser()
+       /* public ApplicationUser()
         {
             this.products = new HashSet<Product>();
-        }
+        }*/
     }
 }

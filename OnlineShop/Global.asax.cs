@@ -21,10 +21,16 @@ namespace OnlineShop
 
             //Automapper settings
 
-            var autoMapperConfig = new AutoMapperConfig(Assembly.GetExecutingAssembly());
-            autoMapperConfig.Execute();
+            // After
+            #region AutoMapperConfig
+                var autoMapperConfig = new AutoMapperConfig(Assembly.GetExecutingAssembly());
+                autoMapperConfig.Execute();
+            #endregion
 
-            //Mapper.CreateMap<Product, ProductViewModel>();
+            // Before
+            #region AutoMapper
+                Mapper.CreateMap<Product, ProductViewModel>();
+            #endregion
         }
     }
 }

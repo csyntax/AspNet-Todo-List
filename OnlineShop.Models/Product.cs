@@ -14,8 +14,8 @@ namespace OnlineShop.Models
         [Required]
         public ApplicationUser User { get; set; }
 
-
-        [Column(TypeName = "text")]
+        [Required]
+        [Column(TypeName = "Text")]
         public string Description { get; set; }
     }
 }
