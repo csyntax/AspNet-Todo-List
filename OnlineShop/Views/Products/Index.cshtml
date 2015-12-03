@@ -1,11 +1,53 @@
 ﻿@using OnlineShop.ViewModels.Products
+@using Microsoft.AspNet.Identity
+
 @model IEnumerable<OnlineShop.ViewModels.Products.ProductViewModel>
 
-@foreach (var item in Model)
-{
-    <div>
-        @item.Name
-    </div>
-}
-<hr />
+<br />
+
+<h1>Products - @User.Identity.GetUserName().ToString()</h1>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Published)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Published)
+            </td>
+        </tr>
+    }
+
+</table>
+
 @Html.Partial("_Add", new ProductViewModel())

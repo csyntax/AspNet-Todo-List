@@ -178,6 +178,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Products1Controller.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -245,6 +246,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\_Add.cshtml" />
+    <Content Include="Views\ProductsOne\Create.cshtml" />
+    <Content Include="Views\ProductsOne\Delete.cshtml" />
+    <Content Include="Views\ProductsOne\Details.cshtml" />
+    <Content Include="Views\ProductsOne\Edit.cshtml" />
+    <Content Include="Views\ProductsOne\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

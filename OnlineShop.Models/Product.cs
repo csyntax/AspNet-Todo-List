@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OnlineShop.Models
@@ -17,5 +18,14 @@ namespace OnlineShop.Models
         [Required]
         [Column(TypeName = "Text")]
         public string Description { get; set; }
+
+        [Required]
+        public virtual Category Category { get; set; }
+
+        [Required]
+        public float Price { get; set; }
+
+        [Required]
+        public DateTime Published { get; set; }
     }
 }

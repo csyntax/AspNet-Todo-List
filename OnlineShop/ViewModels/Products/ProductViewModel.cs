@@ -1,17 +1,26 @@
-﻿using OnlineShop.Models;
-using OnlineShop.Infrastructure.Mapping;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
+using OnlineShop.Models;
+using OnlineShop.Infrastructure.Mapping;
 
 namespace OnlineShop.ViewModels.Products
 {
     public class ProductViewModel : IMapFrom<Product>
     {
-
         [Required]
         public string Name { get; set; }
 
         [Required]
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
+
+        [Required]
+        public Category Category { get; set; }
+
+        [Required]
+        public float Price { get; set; }
+
+        [Required]
+        public DateTime Published { get; set; }
     }
 }

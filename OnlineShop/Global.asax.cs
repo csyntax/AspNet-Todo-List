@@ -1,7 +1,4 @@
-﻿using AutoMapper;
-using OnlineShop.Infrastructure.Mapping;
-using OnlineShop.Models;
-using OnlineShop.ViewModels.Products;
+﻿using OnlineShop.Infrastructure.Mapping;
 using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
@@ -19,18 +16,8 @@ namespace OnlineShop
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            //Automapper settings
-
-            // After
-            #region AutoMapperConfig
-                var autoMapperConfig = new AutoMapperConfig(Assembly.GetExecutingAssembly());
-                autoMapperConfig.Execute();
-            #endregion
-
-            // Before
-            #region AutoMapper
-                Mapper.CreateMap<Product, ProductViewModel>();
-            #endregion
+            var autoMapperConfig = new AutoMapperConfig(Assembly.GetExecutingAssembly());
+            autoMapperConfig.Execute();
         }
     }
 }

@@ -8,14 +8,10 @@ using System.Web;
 using System.Web.Mvc;
 using OnlineShop.Data;
 using OnlineShop.Models;
-using OnlineShop.Infrastructure.Mapping;
-using System.Linq;
-using System.Web.Mvc;
 
 using OnlineShop.ViewModels.Products;
 
 using AutoMapper.QueryableExtensions;
-using AutoMapper;
 
 namespace OnlineShop.Controllers
 {
@@ -24,10 +20,6 @@ namespace OnlineShop.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-       /* public ProductsController(ApplicationDbContext db)
-        {
-            this.db = db;
-        }*/
         // GET: Products
         public ActionResult Index()
         {
@@ -37,7 +29,9 @@ namespace OnlineShop.Controllers
 
             return this.View(viewModel);
         }
-       
+        
+        [HttpPost]
+        [ValidateAntiForgeryToken]       
         public ActionResult Add(ProductViewModel inputModel)
         {
             if (this.ModelState.IsValid)
@@ -46,8 +40,12 @@ namespace OnlineShop.Controllers
                 var user = this.db.Users.FirstOrDefault(x => x.UserName == currentUserName);
 
                 var newProduct = new Product {
-                    Name= inputModel.Name,
-                    User = user
+                    User = user,
+                    Name = inputModel.Name,
+                    Description = inputModel.Description,
+                    Category = inputModel.Category,
+                    Price = inputModel.Price,
+                    Published = inputModel.Published
                 };
 
                 this.db.Products.Add(newProduct);
@@ -57,7 +55,7 @@ namespace OnlineShop.Controllers
 
             return this.RedirectToAction("Index");
         }
-
+        
        /* protected override void Dispose(bool disposing)
         {
             if (disposing)
