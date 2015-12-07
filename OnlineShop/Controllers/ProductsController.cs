@@ -20,12 +20,14 @@ namespace OnlineShop.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Products
         public ActionResult Index()
         {
-
             var currentUserName = this.User.Identity.Name;
-            var viewModel = db.Products.Where(x => x.User.UserName == currentUserName).Project().To<ProductViewModel>().ToList();
+            var viewModel = db.Products
+                            .Where(x => x.User.UserName == currentUserName)
+                            .Project().
+                            To<ProductViewModel>()
+                            .ToList();
 
             return this.View(viewModel);
         }
@@ -55,14 +57,28 @@ namespace OnlineShop.Controllers
 
             return this.RedirectToAction("Index");
         }
-        
-       /* protected override void Dispose(bool disposing)
+
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Product product = db.Products.Find(id);
+            if (product == null)
+            {
+                return HttpNotFound();
+            }
+            return View(product);
+        }
+
+        protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }*/
+        }
     }
 }
