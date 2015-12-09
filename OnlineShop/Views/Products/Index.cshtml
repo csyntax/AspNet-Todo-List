@@ -3,10 +3,13 @@
 
 @model IEnumerable<OnlineShop.ViewModels.Products.ProductViewModel>
 
-<br />
+@{
+    ViewBag.Title = "Producs";
+}
 
-<h1>Products - @User.Identity.GetUserName().ToString()</h1>
-
+<p>
+    @Html.ActionLink("Add", "Add")
+</p>
 <table class="table">
     <tr>
         <th>
@@ -24,7 +27,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Published)
         </th>
-        <th></th>
+        <th>
+            Actions
+        </th>
     </tr>
 
     @foreach (var item in Model)
@@ -45,9 +50,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Published)
             </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
         </tr>
     }
-
 </table>
-
-@Html.Partial("_Add", new ProductViewModel())

@@ -1,9 +1,9 @@
 ﻿@model OnlineShop.ViewModels.Products.ProductViewModel
 
-@using (Html.BeginForm("Add", "Products", FormMethod.Post)) 
+@using (Html.BeginForm("Add", "Products", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
