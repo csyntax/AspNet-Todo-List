@@ -1,7 +1,7 @@
 ﻿@using OnlineShop.ViewModels.Products
 @using Microsoft.AspNet.Identity
 
-@model IEnumerable<OnlineShop.ViewModels.Products.ProductViewModel>
+@model IEnumerable<OnlineShop.ViewModels.Products.ProductIndexViewModel>
 
 @{
     ViewBag.Title = "Producs";
@@ -52,6 +52,7 @@
             </td>
             <td>
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
             </td>
         </tr>
     }

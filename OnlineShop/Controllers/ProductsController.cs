@@ -21,7 +21,11 @@ namespace OnlineShop.Controllers
         public ActionResult Index()
         {
             var currentUserName = this.User.Identity.Name;
-            var viewModel = db.Products.Where(x => x.User.UserName == currentUserName).ProjectTo<ProductViewModel>().ToList();
+            var viewModel = db
+                            .Products
+                            .Where(user => user.User.UserName == currentUserName)
+                            .ProjectTo<ProductIndexViewModel>()
+                            .ToList();
 
             return View(viewModel);
         }
@@ -57,7 +61,19 @@ namespace OnlineShop.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
+        [HttpGet]
+        public ActionResult Details(int id)
+        {
+            var product = db
+                        .Products
+                        .Where(t => t.Id == id)
+                        .ProjectTo<ProductDetailsViewModel>()
+                        .FirstOrDefault();
+
+            return View(product);
+        }
+
+        //[HttpPost]
         public ActionResult Delete(int id)
         {
             var product = db.Products.Find(id);
