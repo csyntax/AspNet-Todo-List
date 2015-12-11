@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Models", "OnlineShop.Models\OnlineShop.Models.csproj", "{8CEBAAE3-9089-422C-B919-45B25274D64C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Data", "OnlineShop.Data\OnlineShop.Data.csproj", "{A515AE3B-073E-43A1-85E0-E91767F54B1F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Infrastructure", "OnlineShop.Infrastructure\OnlineShop.Infrastructure.csproj", "{306E5B75-D192-48B7-89BF-695496FA5723}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop", "OnlineShop\OnlineShop.csproj", "{AB8790DF-7944-4D17-BBCD-6FC590BF10A1}"
 EndProject
@@ -25,10 +23,6 @@ Global
 		{A515AE3B-073E-43A1-85E0-E91767F54B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A515AE3B-073E-43A1-85E0-E91767F54B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A515AE3B-073E-43A1-85E0-E91767F54B1F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{306E5B75-D192-48B7-89BF-695496FA5723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{306E5B75-D192-48B7-89BF-695496FA5723}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{306E5B75-D192-48B7-89BF-695496FA5723}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{306E5B75-D192-48B7-89BF-695496FA5723}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AB8790DF-7944-4D17-BBCD-6FC590BF10A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AB8790DF-7944-4D17-BBCD-6FC590BF10A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB8790DF-7944-4D17-BBCD-6FC590BF10A1}.Release|Any CPU.ActiveCfg = Release|Any CPU

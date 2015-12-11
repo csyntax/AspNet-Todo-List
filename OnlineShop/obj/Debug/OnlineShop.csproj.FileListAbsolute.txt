@@ -33,7 +33,6 @@ C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\Microsoft.Owin.Security.Twitter.
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\Newtonsoft.Json.dll
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\OnlineShop.Data.dll
-C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\OnlineShop.Infrastructure.dll
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\OnlineShop.Models.dll
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\Owin.dll
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\System.Web.Helpers.dll
@@ -45,7 +44,6 @@ C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\System.Web.WebPages.dll
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\System.Web.WebPages.Razor.dll
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\WebGrease.dll
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\OnlineShop.Data.pdb
-C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\OnlineShop.Infrastructure.pdb
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\OnlineShop.Models.pdb
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\AutoMapper.xml
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
@@ -90,3 +88,5 @@ C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\roslyn\System.IO.FileSystem.dll
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\roslyn\System.IO.FileSystem.Primitives.dll
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\roslyn\vbc.exe.config
 C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\roslyn\vbc.rsp
+C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\MyAutoMapping.dll
+C:\Users\Ivan\Desktop\OnlineShop\OnlineShop\bin\MyAutoMapping.pdb

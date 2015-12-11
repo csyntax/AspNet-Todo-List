@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using OnlineShop.Models;
-using OnlineShop.Infrastructure.Mapping;
+using MyAutoMapping;
 
 namespace OnlineShop.ViewModels.Products
 {

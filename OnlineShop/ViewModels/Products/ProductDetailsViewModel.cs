@@ -1,5 +1,5 @@
 ﻿using System;
-using OnlineShop.Infrastructure.Mapping;
+using MyAutoMapping;
 using OnlineShop.Models;
 
 namespace OnlineShop.ViewModels.Products

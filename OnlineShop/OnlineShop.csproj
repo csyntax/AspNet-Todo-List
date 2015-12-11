@@ -57,6 +57,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MyAutoMapping, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MyAutoMapping.2.0.0\lib\MyAutoMapping.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -270,10 +274,6 @@
     <ProjectReference Include="..\OnlineShop.Data\OnlineShop.Data.csproj">
       <Project>{a515ae3b-073e-43a1-85e0-e91767f54b1f}</Project>
       <Name>OnlineShop.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OnlineShop.Infrastructure\OnlineShop.Infrastructure.csproj">
-      <Project>{306e5b75-d192-48b7-89bf-695496fa5723}</Project>
-      <Name>OnlineShop.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\OnlineShop.Models\OnlineShop.Models.csproj">
       <Project>{8cebaae3-9089-422c-b919-45b25274d64c}</Project>

@@ -1,9 +1,9 @@
-﻿using OnlineShop.Infrastructure.Mapping;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using MyAutoMapping;
 
 namespace OnlineShop
 {

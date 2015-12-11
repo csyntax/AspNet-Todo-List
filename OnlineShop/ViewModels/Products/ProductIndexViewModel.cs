@@ -1,6 +1,6 @@
-﻿using OnlineShop.Infrastructure.Mapping;
+﻿using System;
+using MyAutoMapping;
 using OnlineShop.Models;
-using System;
 
 namespace OnlineShop.ViewModels.Products
 {
