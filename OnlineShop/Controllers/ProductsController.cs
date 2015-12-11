@@ -21,11 +21,7 @@ namespace OnlineShop.Controllers
         public ActionResult Index()
         {
             var currentUserName = this.User.Identity.Name;
-            var viewModel = db
-                            .Products
-                            .Where(user => user.User.UserName == currentUserName)
-                            .ProjectTo<ProductIndexViewModel>()
-                            .ToList();
+            var viewModel = db.Products.Where(user => user.User.UserName == currentUserName).ProjectTo<ProductIndexViewModel>().ToList();
 
             return View(viewModel);
         }
@@ -45,35 +41,32 @@ namespace OnlineShop.Controllers
                 var currentUserName = this.User.Identity.Name;
                 var user = this.db.Users.FirstOrDefault(x => x.UserName == currentUserName);
 
-                var newProduct = new Product {
+                this.db.Products.Add(new Product
+                {
                     User = user,
                     Name = inputModel.Name,
                     Description = inputModel.Description,
                     Category = inputModel.Category,
                     Price = inputModel.Price,
                     Published = inputModel.Published
-                };
+                });
 
-                this.db.Products.Add(newProduct);
                 this.db.SaveChanges();
+
+                return RedirectToAction("Index");
             }
 
-            return RedirectToAction("Index");
+            return View();
         }
 
         [HttpGet]
         public ActionResult Details(int id)
         {
-            var product = db
-                        .Products
-                        .Where(t => t.Id == id)
-                        .ProjectTo<ProductDetailsViewModel>()
-                        .FirstOrDefault();
+            var product = db.Products.Where(x => x.Id == id).ProjectTo<ProductDetailsViewModel>().FirstOrDefault();
 
             return View(product);
         }
 
-        //[HttpPost]
         public ActionResult Delete(int id)
         {
             var product = db.Products.Find(id);

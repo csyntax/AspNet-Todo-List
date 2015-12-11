@@ -7,7 +7,9 @@ namespace OnlineShop.ViewModels.Products
 {
     public class ProductViewModel : IMapFrom<Product>
     {
+        [Key]
         public int Id { get; set; }
+
         [Required]
         public string Name { get; set; }
 
