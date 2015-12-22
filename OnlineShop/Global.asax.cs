@@ -16,8 +16,8 @@ namespace OnlineShop
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            var autoMapperConfig = new AutoMapperConfig(Assembly.GetExecutingAssembly());
-            autoMapperConfig.Execute();
+            var myAutoMappingConfig = new MyAutoMappingConfig(Assembly.GetExecutingAssembly());
+            myAutoMappingConfig.Execute();
         }
     }
 }
