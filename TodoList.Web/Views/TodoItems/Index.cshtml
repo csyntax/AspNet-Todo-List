@@ -1,0 +1,15 @@
+﻿@model IEnumerable<TodoList.Models.TodoItem>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<ol>
+    @foreach (var todoItem in Model)
+    {
+        <li>
+            @todoItem.Title
+        </li>
+    }
+</ol>
