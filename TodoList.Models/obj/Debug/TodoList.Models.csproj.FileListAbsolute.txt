@@ -12,3 +12,17 @@ c:\users\csyntax\documents\visual studio 2015\Projects\AspNet-Todo-List\TodoList
 c:\users\csyntax\documents\visual studio 2015\Projects\AspNet-Todo-List\TodoList.Models\obj\Debug\TodoList.Models.csprojResolveAssemblyReference.cache
 c:\users\csyntax\documents\visual studio 2015\Projects\AspNet-Todo-List\TodoList.Models\obj\Debug\TodoList.Models.dll
 c:\users\csyntax\documents\visual studio 2015\Projects\AspNet-Todo-List\TodoList.Models\obj\Debug\TodoList.Models.pdb
+D:\workspace\AspNet-Todo-List\TodoList.Models\bin\Debug\TodoList.Models.dll.config
+D:\workspace\AspNet-Todo-List\TodoList.Models\bin\Debug\TodoList.Models.dll
+D:\workspace\AspNet-Todo-List\TodoList.Models\bin\Debug\TodoList.Models.pdb
+D:\workspace\AspNet-Todo-List\TodoList.Models\bin\Debug\EntityFramework.dll
+D:\workspace\AspNet-Todo-List\TodoList.Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\workspace\AspNet-Todo-List\TodoList.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\workspace\AspNet-Todo-List\TodoList.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\workspace\AspNet-Todo-List\TodoList.Models\bin\Debug\EntityFramework.xml
+D:\workspace\AspNet-Todo-List\TodoList.Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\workspace\AspNet-Todo-List\TodoList.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\workspace\AspNet-Todo-List\TodoList.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\workspace\AspNet-Todo-List\TodoList.Models\obj\Debug\TodoList.Models.csprojResolveAssemblyReference.cache
+D:\workspace\AspNet-Todo-List\TodoList.Models\obj\Debug\TodoList.Models.dll
+D:\workspace\AspNet-Todo-List\TodoList.Models\obj\Debug\TodoList.Models.pdb

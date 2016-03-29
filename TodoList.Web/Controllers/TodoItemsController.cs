@@ -45,5 +45,18 @@ namespace TodoList.Web.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id)
+        {
+            var todo = db.TodoItems.FirstOrDefault(user => user.Id == id);
+
+            db.TodoItems.Remove(todo);
+
+            db.SaveChanges(); 
+
+            return RedirectToAction("Index");
+        }
     }
 }

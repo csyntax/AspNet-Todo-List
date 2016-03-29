@@ -9,7 +9,13 @@
     @foreach (var todoItem in Model)
     {
         <li>
-            @todoItem.Title
+            <h3>@todoItem.Title</h3>
+            @using(Html.BeginForm("Delete", "TodoItems", new { Id = todoItem.Id }, FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                
+                <button type="submit">Delete</button>
+            }
         </li>
     }
 </ol>
