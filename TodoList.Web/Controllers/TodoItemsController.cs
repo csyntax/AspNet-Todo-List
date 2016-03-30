@@ -16,7 +16,7 @@ namespace TodoList.Web.Controllers
         public ActionResult Index()
         {
             var currentUserName = User.Identity.Name;
-            var viewModel = db.TodoItems.Where(x => x.User.UserName == currentUserName).ToList();
+            var viewModel = db.TodoItems.Where(u => u.User.UserName == currentUserName).ToList();
 
             return View(viewModel);
         }
@@ -28,12 +28,13 @@ namespace TodoList.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(TodoItem todoItem)
         {
             if (ModelState.IsValid)
             {
                 var currentUserName = User.Identity.Name;
-                var user = db.Users.FirstOrDefault(x => x.UserName == currentUserName);
+                var user = db.Users.FirstOrDefault(u => u.UserName == currentUserName);
                 var todo = new TodoItem {
                     Title = todoItem.Title,
                     User = user
@@ -50,7 +51,7 @@ namespace TodoList.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id)
         {
-            var todo = db.TodoItems.FirstOrDefault(user => user.Id == id);
+            var todo = db.TodoItems.FirstOrDefault(todoItem => todoItem.Id == id);
 
             db.TodoItems.Remove(todo);
 
