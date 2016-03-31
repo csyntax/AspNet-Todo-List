@@ -5,7 +5,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using TodoList.Web.Models;
+using TodoList.Web.ViewModels;
 using TodoList.Models;
 using TodoList.Data;
 

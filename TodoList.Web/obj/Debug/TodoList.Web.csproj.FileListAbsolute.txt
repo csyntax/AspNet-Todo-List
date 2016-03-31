@@ -170,3 +170,7 @@ D:\workspace\AspNet-Todo-List\TodoList.Web\bin\Microsoft.Owin.Security.Microsoft
 D:\workspace\AspNet-Todo-List\TodoList.Web\obj\Debug\TodoList.Web.csprojResolveAssemblyReference.cache
 D:\workspace\AspNet-Todo-List\TodoList.Web\obj\Debug\TodoList.Web.dll
 D:\workspace\AspNet-Todo-List\TodoList.Web\obj\Debug\TodoList.Web.pdb
+D:\workspace\AspNet-Todo-List\TodoList.Web\bin\AutoMapper.dll
+D:\workspace\AspNet-Todo-List\TodoList.Web\bin\MyAutoMapping.dll
+D:\workspace\AspNet-Todo-List\TodoList.Web\bin\AutoMapper.xml
+D:\workspace\AspNet-Todo-List\TodoList.Web\bin\MyAutoMapping.pdb

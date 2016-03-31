@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using TodoList.Models;
 using TodoList.Data;
+using TodoList.Web.ViewModels.Todo;
+using AutoMapper.QueryableExtensions;
 
 namespace TodoList.Web.Controllers
 {
@@ -16,7 +18,7 @@ namespace TodoList.Web.Controllers
         public ActionResult Index()
         {
             var currentUserName = User.Identity.Name;
-            var viewModel = db.TodoItems.Where(u => u.User.UserName == currentUserName).ToList();
+            var viewModel = db.TodoItems.Where(x => x.User.UserName == currentUserName).ProjectTo<ToDoItemViewModel>().ToList();
 
             return View(viewModel);
         }
@@ -29,18 +31,18 @@ namespace TodoList.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(TodoItem todoItem)
+        public ActionResult Create(ToDoItemViewModel inputModel)
         {
             if (ModelState.IsValid)
             {
                 var currentUserName = User.Identity.Name;
                 var user = db.Users.FirstOrDefault(u => u.UserName == currentUserName);
-                var todo = new TodoItem {
-                    Title = todoItem.Title,
-                    User = user
-                };
 
-                db.TodoItems.Add(todo);
+                db.TodoItems.Add(new TodoItem {
+                    Title = inputModel.Title,
+                    User = user
+                });
+
                 db.SaveChanges();
             }
 

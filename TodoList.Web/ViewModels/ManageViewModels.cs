@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace TodoList.Web.Models
+namespace TodoList.Web.ViewModels
 {
     public class IndexViewModel
     {

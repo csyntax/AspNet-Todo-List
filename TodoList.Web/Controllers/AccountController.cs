@@ -8,7 +8,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using TodoList.Web.Models;
+using TodoList.Web.ViewModels;
 using TodoList.Data;
 using TodoList.Models;
 

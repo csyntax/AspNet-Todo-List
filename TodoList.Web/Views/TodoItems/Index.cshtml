@@ -1,9 +1,11 @@
-﻿@model IEnumerable<TodoList.Models.TodoItem>
+﻿@model IEnumerable<TodoList.Web.ViewModels.Todo.ToDoItemViewModel>
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
+
+@Html.ActionLink("Create", "Create", "TodoItems", new { @class = "btn btn-default" })
 
 <ol>
     @foreach (var todoItem in Model)
